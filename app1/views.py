@@ -12,10 +12,13 @@ def index(request):
         titulo = f'titulo cuando se accede con otro metodo: {request.method}'
     # lo siguiente muestra como obtener por GET los parametros que se puedan ingresar por url
     parameters_get = request.GET.get('param1')
-    return HttpResponse(f"""
-        <h1>{titulo}</h1>
-        <p>valor de param1: {parameters_get}</p>
-        """)
+        #ya no usaremos las vistas -> usaremos los templates
+    # return HttpResponse(f"""
+    #     <h1>{titulo}</h1>
+    #     <p>valor de param1: {parameters_get}</p>
+    #     """)
+        # con el dicc que pasamos como param a 'render' indicamos qué variables estarán disponibles.
+    return render(request, 'app1/index.html', {'titulo': titulo})
 
 def quienes_somos(request):
         # redirige a la url(path) con el name 'saludar_por_defecto' 

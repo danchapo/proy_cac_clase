@@ -56,8 +56,10 @@ ROOT_URLCONF = 'proy_cac_clase.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        # los templates los agruparemos en la carp 'templates' a nivel proyecto.
+        'DIRS': [BASE_DIR/'templates'],
+        #por default viene 'true'
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
