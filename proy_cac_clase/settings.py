@@ -59,7 +59,7 @@ TEMPLATES = [
         # los templates los agruparemos en la carp 'templates' a nivel proyecto.
         'DIRS': [BASE_DIR/'templates'],
         #por default viene 'true'
-        'APP_DIRS': False,
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
